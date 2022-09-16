@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.welcome.WelcomeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/first_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/login_image"
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="@dimen/_290sdp"
+        android:src="@drawable/welcome"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@id/second_guideline"
+        app:layout_constraintStart_toStartOf="@id/first_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_tv"
+        style="@style/WelcomeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:gravity="center"
+        android:text="@string/title_activity_welcome"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/second_guideline"
+        app:layout_constraintStart_toEndOf="@id/first_guideline"
+        app:layout_constraintTop_toBottomOf="@id/login_image" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        style="@style/WelcomeTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:text="@string/welcome_message"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/second_guideline"
+        app:layout_constraintStart_toEndOf="@id/first_guideline"
+        app:layout_constraintTop_toBottomOf="@id/welcome_tv" />
+
+    <ImageButton
+        android:id="@+id/welcome_button"
+        style="@style/ButtonStyle"
+        android:src="@drawable/ic_arrow_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/second_guideline"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/first_guideline"
+        app:layout_constraintTop_toBottomOf="@id/name_tv"
+        app:layout_constraintVertical_bias="0.1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

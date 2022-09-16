@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="shoeData"
+            type="com.example.shoeshop.data.model.Shoe" />
+    <variable
+        name="viewModel"
+        type="com.example.shoeshop.viewmodel.MainViewModel" />
+</data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/first_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/shoe_name_tx"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/name"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/first_guideline"
+        app:layout_constraintTop_toTopOf="@id/top_guideline" />
+
+    <EditText
+        android:id="@+id/shoe_name_edt"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:hint="@string/enter_shoe_name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:text="@={shoeData.name}"
+        app:layout_constraintEnd_toEndOf="@id/second_guideline"
+        app:layout_constraintStart_toEndOf="@id/shoe_name_tx"
+        app:layout_constraintTop_toBottomOf="@id/shoe_name_tx" />
+
+    <TextView
+        android:id="@+id/shoe_company_tx"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:text="@string/company"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/first_guideline"
+        app:layout_constraintTop_toBottomOf="@id/shoe_name_edt" />
+
+    <EditText
+        android:id="@+id/shoe_company_edt"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:hint="@string/enter_company_name"
+        android:inputType="text"
+        android:text="@={shoeData.company}"
+        app:layout_constraintEnd_toEndOf="@id/second_guideline"
+        app:layout_constraintStart_toStartOf="@+id/shoe_name_edt"
+        app:layout_constraintTop_toBottomOf="@+id/shoe_company_tx" />
+
+    <TextView
+        android:id="@+id/shoe_size_txt"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:text="@string/size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/first_guideline"
+        app:layout_constraintTop_toBottomOf="@id/shoe_company_edt" />
+
+    <EditText
+        android:id="@+id/shoe_size_edt"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_size_number"
+        android:inputType="numberDecimal"
+        android:text="@={shoeData.size}"
+        app:layout_constraintEnd_toStartOf="@+id/second_guideline"
+        app:layout_constraintStart_toStartOf="@id/shoe_company_edt"
+        app:layout_constraintTop_toBottomOf="@id/shoe_size_txt" />
+
+    <TextView
+        android:id="@+id/shoe_description_txt"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:text="@string/description"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/first_guideline"
+        app:layout_constraintTop_toBottomOf="@id/shoe_size_edt" />
+
+    <EditText
+        android:id="@+id/shoe_description_edit"
+        style="@style/EditTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_description"
+        android:inputType="text"
+        android:minLines="4"
+        android:text="@={shoeData.description}"
+        app:layout_constraintEnd_toStartOf="@id/second_guideline"
+        app:layout_constraintStart_toEndOf="@id/shoe_description_txt"
+        app:layout_constraintTop_toBottomOf="@id/shoe_description_txt" />
+
+    <Button
+        android:id="@+id/cancel_button"
+        style="@style/CancelButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:text="@string/cancel"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintStart_toStartOf="@id/first_guideline"
+        app:layout_constraintTop_toBottomOf="@id/shoe_description_edit" />
+
+    <Button
+        android:id="@+id/save_button"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        android:text="@string/save"
+        android:onClick="@{() -> viewModel.addShoe(shoeData.name, shoeData.size, shoeData.company, shoeData.description)}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toEndOf="@+id/cancel_button"
+        app:layout_constraintTop_toTopOf="@+id/cancel_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

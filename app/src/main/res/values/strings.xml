@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Shoe Shop</string>
+    <string name="title_activity_welcome">Welcome to our Shoe Shop ...</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_Login">Log in</string>
+    <string name="action_Login_with_exciting_account">Login with existing account</string>
+    <string name="welcome_message">"Let\'s Start"</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="email_example">example@gmail.com</string>
+    <string name="title_activity_instructions">InstructionsActivity</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">With four pairs of shoes, You can travel the world.</string>
+    <string name="hello_second_fragment">When your feet start to hurt, place yourself in someone else\'s shoes</string>
+    <string name="start">Start</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="continue_text">Click Next To Start your Journey</string>
+    <string name="description">Description:</string>
+    <string name="size">Size:</string>
+    <string name="company">Company:</string>
+    <string name="name">Name:</string>
+    <string name="enter_shoe_name">Enter Name...</string>
+    <string name="enter_company_name">Enter Company Name...</string>
+    <string name="enter_size_number">Enter Size Number...</string>
+    <string name="enter_description">Enter Model Description...</string>
+    <string name="invalid_username">Not a valid username or Password </string>
+    <string name="logout">Log out</string>
+
+</resources>
