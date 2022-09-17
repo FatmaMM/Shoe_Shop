@@ -31,7 +31,7 @@ class DetailsFragment : Fragment() {
         binding.shoeData = shoe
 
         binding.cancelButton.setOnClickListener {
-            findNavController().navigate(DetailsFragmentDirections.actionDetailsFragmentToShoeListFragment())
+            navigateToShoeList()
         }
 
         viewModel.isSaveBTClicked.observe(this as LifecycleOwner, Observer {

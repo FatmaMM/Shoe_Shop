@@ -27,7 +27,7 @@ class ShoeListFragment : Fragment() {
 
         viewModel.shoeList.observe(this as LifecycleOwner, Observer {
 
-            for (shoe in viewModel.shoeList.value!!) {
+            for (shoe in it) {
                 val itemBinding = ShoeItemBinding.inflate(layoutInflater)
                 itemBinding.shoeData = shoe
                 binding.linearLayout.addView(itemBinding.root)

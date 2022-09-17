@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="shoeData"
@@ -8,8 +9,12 @@
         name="viewModel"
         type="com.example.shoeshop.viewmodel.MainViewModel" />
 </data>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    <!--  it's better to use ConstraintLayout to make a flat layer better than linearlayout
+    cause if i use linearlayout i will need to add anther linearlayout for buttons with
+    horizontal orientation and that more than one layer-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
